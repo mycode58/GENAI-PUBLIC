@@ -78,3 +78,71 @@ Map extracted data into categories:
   "keywords": ["run", "buy", "book", "amazing"]
 }
 
+### BAG OF WORDS #####
+
+
+Bag of Words (BoW) is one of the simplest ways to convert unstructured text into structured data. It ignores grammar and word order, and just counts how often words appear.
+
+🔹 What is Bag of Words (BoW)?
+
+BoW represents text as a frequency vector of words.
+
+👉 In simple terms:
+
+Take all unique words
+Count how many times each word appears
+Store counts in a structured format (like a table or vector)
+🔹 Example (Step-by-Step)
+🧾 Unstructured Data (Sentences)
+“I love playing football”
+“I love watching football”
+🔹 Step 1: Noise Removal
+
+Remove stop words like I
+
+👉 Result:
+
+“love playing football”
+“love watching football”
+🔹 Step 2: Tokenization
+
+Split into words:
+
+Sentence 1 → [love, playing, football]
+Sentence 2 → [love, watching, football]
+🔹 Step 3: Normalization (Stemming/Lemmatization)
+
+Using Lemmatization:
+
+playing → play
+watching → watch
+
+👉 Result:
+
+Sentence 1 → [love, play, football]
+Sentence 2 → [love, watch, football]
+🔹 Step 4: Create Vocabulary
+
+Unique words from all sentences:
+
+👉 Vocabulary:
+
+[love, play, watch, football]
+
+🔹 Step 5: Create BoW Vectors
+
+Count word frequency:
+
+Word	Sentence 1	Sentence 2
+love	1	1
+play	1	0
+watch	0	1
+football	1	1
+🔹 Final Structured Output
+Sentence 1 → [1, 1, 0, 1]
+Sentence 2 → [1, 0, 1, 1]
+
+Each position corresponds to:
+👉 [love, play, watch, football]
+
+
