@@ -1,0 +1,80 @@
+NLP:
+
+To conver Unstructured data into structured data
+    1. (NOISE ENTRY REMOVAL) 
+                    avoid Stop Words (the,I, he/she/it..etc)
+                    avoid Puctuvations
+                    avoid URL's
+                    avoid Numbers
+    2. (WORD NORMALIZATION) 
+                    TOkenization
+                    Stemming. ( Using True words which means to avoid +ING, +es +ED)
+                    Lemmatization ( This also use True words but the process is length and effective)
+                    So  have to one of it.if speed is imp go for stemming.
+                      
+    3. Regular Expressions
+
+    4. Modified Tax
+
+
+Here’s a clear, step-by-step example showing how unstructured text gets converted into structured data using your pipeline.
+
+🔹 Example Input (Unstructured Data)
+
+“Hey!!! I was running to https://example.com
+ on 12/05/2024, and I bought 3 books. They were amazing!!!”
+
+🔹 Step 1: Noise Entry Removal
+
+Remove stop words, punctuation, URLs, and numbers.
+
+Remove stop words: I, was, to, on, and, they, were
+Remove punctuation: !!! , .
+Remove URL: https://example.com
+Remove numbers: 12/05/2024, 3
+
+👉 Result:
+
+“Hey running bought books amazing”
+
+🔹 Step 2: Word Normalization
+Tokenization
+
+Split sentence into words:
+
+[“Hey”, “running”, “bought”, “books”, “amazing”]
+
+Option A: Stemming (faster, less accurate)
+
+[“hey”, “run”, “bought”, “book”, “amaz”]
+
+Option B: Lemmatization (slower, more accurate)
+
+[“hey”, “run”, “buy”, “book”, “amazing”]
+
+🔹 Step 3: Regular Expressions (Pattern Extraction)
+
+Example patterns:
+
+Extract verbs
+Extract keywords
+Identify entities
+
+👉 Example structured extraction:
+
+Action: buy
+Items: book
+Sentiment word: amazing
+Activity: run
+🔹 Step 4: Modified Taxonomy (Organizing into Structure)
+
+Map extracted data into categories:
+
+{
+  "user_action": "buy",
+  "activity": "running",
+  "item": "book",
+  "sentiment": "positive",
+  "keywords": ["run", "buy", "book", "amazing"]
+}
+
