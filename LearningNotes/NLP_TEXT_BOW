@@ -1,6 +1,6 @@
 NLP:
 
-To conver Unstructured data into structured data
+To convert Unstructured data into structured data
     1. (NOISE ENTRY REMOVAL) 
                     avoid Stop Words (the,I, he/she/it..etc)
                     avoid Puctuvations
@@ -144,5 +144,17 @@ Sentence 2 → [1, 0, 1, 1]
 
 Each position corresponds to:
 👉 [love, play, watch, football]
+===================
+Vamsi 
+Apr 27 2026
+My Notes:  To Convert Unstructured data into structured data, First we may need to nail down to Bag of Words - with the following process
+  To convert Unstructured data into structured data
+    1. (NOISE ENTRY REMOVAL) 
+    2. (WORD NORMALIZATION) 
+    3. Regular Expressions
+    4. Modified Taxonamy
+With this no of words will be reduced drastically, once we have BOW then will convert into DTM (Documental Matrix)  with help of either Counterized Vector or TF-IDI.
+
+
 
 
